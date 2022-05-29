@@ -1,3 +1,5 @@
+@use "src/styles/vars";
+
 .ingredients {
   margin: 1.5rem 0;
   &__list {
@@ -11,7 +13,7 @@
       }
 
       &__quantity {
-        background-color: #e3783e;
+        background-color: vars.$primaryColor;
         color: white;
         padding: 0.5rem 0.5rem;
         border-radius: 5px;

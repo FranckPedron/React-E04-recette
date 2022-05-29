@@ -1,24 +1,25 @@
+import PropTypes from 'prop-types';
 import './ingredients.scss';
 
-function Ingredients() {
+function Ingredients({ ingredients }) {
   return (
     <section className="ingredients">
       <ul className="ingredients__list">
-        <li className="ingredients__list__item">
-          <span className="ingredients__list__item__quantity">375g</span>
-          de farine
-        </li>
-        <li className="ingredients__list__item">
-          <span className="ingredients__list__item__quantity">50cl</span>
-          d'eau
-        </li>
-        <li className="ingredients__list__item">
-          <span className="ingredients__list__item__quantity">4 gouttes</span>
-          d'eau de fleur d'oranger
-        </li>
+        {
+          ingredients.map((ingredient) => (
+            <li key={ingredient.id} className="ingredients__list__item">
+              <span className="ingredients__list__item__quantity">{ingredient.quantity} {ingredient.unit}</span>
+              {ingredient.name}
+            </li>
+          ))
+        };
       </ul>
     </section>
   );
 }
+
+Ingredients.propTypes = {
+  ingredients: PropTypes.array.isRequired,
+};
 
 export default Ingredients;

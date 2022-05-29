@@ -1,15 +1,20 @@
+import PropTypes from 'prop-types';
 import './instructions.scss';
 
-function Instructions() {
+function Instructions({ steps }) {
   return (
     <section className="instructions">
       <ul className="instructions__list">
-        <li className="instructions__list__item">Peser</li>
-        <li className="instructions__list__item">Mesurer</li>
-        <li className="instructions__list__item">chronométrer</li>
+        {
+          steps.map((step) => <li key={step} className="instructions__list__item">{step}</li>)
+        }
       </ul>
     </section>
   );
 }
+
+Instructions.propTypes = {
+  steps: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+};
 
 export default Instructions;
