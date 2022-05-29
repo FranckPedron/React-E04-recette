@@ -12,14 +12,21 @@ function Ingredients({ ingredients }) {
               {ingredient.name}
             </li>
           ))
-        };
+        }
       </ul>
     </section>
   );
 }
 
 Ingredients.propTypes = {
-  ingredients: PropTypes.array.isRequired,
+  ingredients: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      quantity: PropTypes.string.isRequired,
+      unit: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
 };
 
 export default Ingredients;
