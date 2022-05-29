@@ -1,0 +1,23 @@
+.instructions {
+  background-color: #f2f2f2;
+  border-radius: 20px 20px 0 0;
+  padding: 3rem 1.5rem;
+
+  &__list {
+
+
+    &__item {
+      padding: 0.5rem;
+
+      &::before {
+        content: '';
+        height: 1px;
+        width: 15px;
+        background-color: #e3783e;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

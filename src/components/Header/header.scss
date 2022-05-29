@@ -1,0 +1,26 @@
+.header {
+  position: relative;
+
+  &__img {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+  }
+
+  &__content {
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+
+    &__title {
+      font-weight: bold;
+      font-size: 3rem;
+      font-style: italic;
+      font-family: serif;
+      margin-bottom: 1rem;
+    }
+  }
+}
