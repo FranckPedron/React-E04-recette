@@ -22,7 +22,7 @@ Ingredients.propTypes = {
   ingredients: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      quantity: PropTypes.string.isRequired,
+      quantity: PropTypes.number.isRequired,
       unit: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
     }).isRequired,
